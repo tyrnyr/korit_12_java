@@ -19,33 +19,31 @@ package ch06_loops;
     5일차 3교시 입니다.
  */
 public class Loop03While2 {
+
     public static void main(String[] args) {
 
-        int i = 1;
-        int j = 1;
+        int day=0;
 
-        while(i<6) {
-            while(j<4) {
-                System.out.println(i + "일차 " + j + "교시입니다.");
-                j++;
+        while(day < 5) {
+            int lesson=0;         // 반복실행문1-a
+            while(lesson < 10) {
+                System.out.println(day + "일차 " + lesson + "교시입니다." + day + " x " + lesson + " = " + (day*lesson)); //반복실행문2
+                lesson++;
             }
-            i++;
-            j = 1;
-            System.out.println();
+            System.out.println("");
+            day++;  // 반복실행문1-b
         }
 
-        System.out.println("두번째 방법");
-        int k = 1;
-        int t = 0;
+        int dan = 2;
+        while(dan < 10) {
+            int num = 1;
+            while (num < 10) {
+                int result = dan * num;
 
-        while(k<6) {
-            t++;
-            System.out.println(k + "일차 " + t + "교시입니다.");
-            if(t == 3) {
-                k++;
-                t =0;
-                System.out.println();
+                System.out.println(dan + " X " + num + " = " + result);
+                num++;
             }
+            dan++;
         }
     }
 }
