@@ -5,6 +5,11 @@ public class Car {
     String color;
     int speed;
 
+    public int publicVar = 10;
+    protected int protectedVar = 20;
+    int defaultVar = 30;
+    private int privateVar = 40;
+
     public void drive() {
         System.out.println(color+" 자동차가 " + "주행중입니다.");
     }
