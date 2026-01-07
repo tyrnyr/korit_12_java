@@ -25,7 +25,5 @@ public class Array15Lotto {
         System.out.println(Math.random()*10 + 1);
         // 그럼 Math.random()을 사용했을 때 1 ~ 45를 return하려면
         System.out.println(Math.random()*45 + 1);
-
-
     }
 }
