@@ -1,8 +1,6 @@
 package ch12_inheritance.books;
-//EBook 클래스에서
-//EBook 클래스는 Book을 상속받도록 처리
-//자식 고유의 필드로 private double fileSize / String format
-public class EBook extends Book {
+
+public class EBook extends Book{
     private double fileSize;
     private String format;
 
@@ -12,10 +10,27 @@ public class EBook extends Book {
         this.format = format;
     }
 
+    public double getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(double fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    // Book클래스의 showInfo() 메서드를 override하여 추가 부분만 '재정의'
     @Override
-    public void showInfo(){
+    public void showInfo() {
         super.showInfo();
-        System.out.println("파일의 크기 : " + fileSize);
-        System.out.println("파일의 종류 : " + format);
+        System.out.println("파일 크기 : " + fileSize);
+        System.out.println("파일 형식 : " + format);
     }
 }
