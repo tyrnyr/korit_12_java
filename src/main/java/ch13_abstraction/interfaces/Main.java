@@ -39,10 +39,10 @@ public class Main {
         tvRemoteController.onPressdChannelUpButton();
         tvRemoteController.onUpChannelUpButton();
 
-        tvRemoteController.onDownVolumDownButton();
         tvRemoteController.onPressdVolumDownButton();
-        tvRemoteController.onUpVolumUpButton();
+        tvRemoteController.onDownVolumDownButton();
         tvRemoteController.onPressdVolumUpButton();
+        tvRemoteController.onUpVolumUpButton();
 
         tvRemoteController.onPressedPowerButton();
 
@@ -53,7 +53,26 @@ public class Main {
             그리고 Main에서
             tvRemoteController.onPressedVolumeDown(); 을 호출하면
             볼륨을 한 칸 내립니다. 가 출력될 수 있도록 작성하시오.
-
          */
+
+
+        System.out.println();
+        System.out.println("------------------------------------");
+
+        AirConditionerController airConditionerController = new AirConditionerController(
+                new TemperatureUpButton(),
+                new TemperatureDownButton(),
+                new ModeChangeButton(),
+                new PowerButton()
+        );
+
+        airConditionerController.OnPressPowerbutton();
+        airConditionerController.OnPressTemperatureDownButton();
+        airConditionerController.OnDownTemperatureDownButton();
+        airConditionerController.OnPressTemperatureUpButton();
+        airConditionerController.OnUpTemperatureUpButton();
+        airConditionerController.ModeChangeButton();
+        airConditionerController.ModeChangeButton();
+        airConditionerController.OnPressPowerbutton();
     }
 }

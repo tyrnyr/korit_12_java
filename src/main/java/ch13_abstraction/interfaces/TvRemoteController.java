@@ -21,6 +21,7 @@ public class TvRemoteController {
         this.channelUpButton = channelUpButton;
         this.volumUpButton = volumUpButton;
         this.volumDownButton = volumDownButton;
+        System.out.println("Tv 리모컨 객체가 생성되었습니다.");
     }
 
     public void onPressedPowerButton() {
