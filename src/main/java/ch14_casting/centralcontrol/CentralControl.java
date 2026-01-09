@@ -163,12 +163,18 @@ public class CentralControl {
         String name = scanner.nextLine();
 
         for ( int i = 0 ; i  < deviceArray.length ; i++ ) {
+            System.out.println(deviceArray[i]);
+
             if(deviceArray[i] == null) continue;
             else {
                 if(deviceArray[i].getClass().getSimpleName().equals(name)) {
                     deviceArray[i] = null;
                 }
             }
+
+//            if(deviceArray[i] == null && deviceArray[i].getClass().getSimpleName().equals(name)) {
+//                deviceArray[i] = null;
+//            } else continue;
         }
         System.out.println(name + " 라는 이름의 기기가 삭제 되었습니다.");
     }
