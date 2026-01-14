@@ -61,6 +61,7 @@ public class BookMap {
         int checkNum;
         String bookName;
         int bookStock;
+        int bookStockTmp;
 
         Scanner scanner = new Scanner(System.in);
         Map<String, Integer> book = new HashMap<>();
@@ -87,7 +88,9 @@ public class BookMap {
                     }
                     System.out.print("재고 수량을 입력하세요 >>> ");
                     bookStock = scanner.nextInt();
+                    scanner.nextLine();
                     book.put(bookName, bookStock);
+                    System.out.println(bookName + " 도서가 "+ bookStock + " 권 추가되었습니다.");
                     break;
 
                 case 2 :
@@ -97,9 +100,13 @@ public class BookMap {
                         System.out.println("해당 도서가 재고에 없습니다.");
                         break;
                     }
-                    System.out.print("새로운 재고 수량을 입력하세요 >>> ");
+                    bookStockTmp = book.get(bookName);
+                    System.out.print("재고 추가분을 입력하세요 >>> ");
                     bookStock = scanner.nextInt();
+                    scanner.nextLine();
+                    bookStock += bookStockTmp;
                     book.replace(bookName, bookStock);
+                    System.out.println(bookName + " 도서가 "+ bookStock + " 권으로 재고가 변경되었습니다.");
                     break;
 
                 case 3 :
@@ -115,6 +122,7 @@ public class BookMap {
                     break;
 
                 default :
+                    System.out.println("잘못된 선택입니다.");
             }
         }
     }
